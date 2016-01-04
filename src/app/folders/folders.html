@@ -1,0 +1,16 @@
+<section >
+<header>
+  <h2 class="text-primary">Folder List</h2>
+</header>
+<div class="row" *ngIf="folders">
+   <div class="col-xs-6 col-md-3" *ngFor="#folder of folders">
+     <a [routerLink]="['Files',{folder:folder.name}]" class="thumbnail">
+      <img src="./img/folder.png" title='{{folder.name}}'>
+      <p>{{folder.name}}</p>
+     </a>
+ </div>
+</div>
+<footer>
+  <p class="text-muted">List of Folders</p>
+</footer>
+</section>

@@ -1,0 +1,16 @@
+<section >
+<header>
+  <h2 class="text-primary">List of files in {{folderName}}</h2>
+</header>
+<div class="row" *ngIf="files">
+  <div class="col-xs-4 col-md-2" *ngFor="#file of files">
+    <a [routerLink]="['FileDescription',{folder:folderName,file:file.name}]" class="thumbnail" >
+      <img src="./img/file.png" alt="{{file.name}}">
+      <p>{{file.name}}</p>
+    </a>
+  </div>
+</div>
+<footer>
+  <p class="text-muted">List of files in Folder</p>
+</footer>
+</section>
